@@ -19,5 +19,13 @@ ubuntu安装：
 
 sudo apt-get install tor polipo/
 
-/etc/init.d/tor start 
+/etc/init.d/tor start
+ 
 service polipo start
+
+
+pip install scrapy
+
+#爬虫测试
+
+scrapy crawl wx
