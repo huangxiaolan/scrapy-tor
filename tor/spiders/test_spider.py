@@ -1,6 +1,5 @@
 # -*- coding=utf8 -*-
 import scrapy
-from weixin_spider.items import LongArticleItem
 from scrapy.shell import inspect_response
 import logging
 
@@ -61,17 +60,6 @@ class WxSpider(scrapy.Spider):
             yield scrapy.Request(url=item, callback=self.parse_item_page)
         
         
-    def parse_item_page(self,response):
-        '''
-        解析微信的详情页面
-        '''
-        #inspect_response(response, self)
-        longArticle=LongArticleItem()
-        title=response.css(".rich_media_title::text").extract_first()
-        longArticle["title"]=[{"name":title}]
-        
-        detail=response.css(".rich_media_content").extract_first()
-        longArticle["detail"]=detail
         
         date=response.css("#post-date::text").extract_first()
         longArticle["createTime"]=date
