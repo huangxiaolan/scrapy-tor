@@ -14,3 +14,10 @@ diskCacheRoot = ""
 The function `ProxyMiddleware` defined in `middlewares.py` will relay all scrapy's requests to Polipo's default port of 8123
 
 Don't forget to start Polipo and Tor before scraping!
+
+ubuntu安装：
+
+sudo apt-get install tor polipo/
+
+/etc/init.d/tor start 
+service polipo start

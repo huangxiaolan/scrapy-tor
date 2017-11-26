@@ -19,7 +19,7 @@ class WxSpider(scrapy.Spider):
         urls = [
             #爬取单个页面的url
             #'http://mp.weixin.qq.com/s?src=3&timestamp=1481080517&ver=1&signature=XDh44AJ0Er8YeNxFKyl80qTwQyOxseg8ZHWb5CHojFe2czLYVFlc0BU2VtK6FU4MpgKW-o*S3afyaNqml-In8zelQbW4JxR4XhgpF5bp6nZBlC-jKI0gv0RSqQC-XT6JpGUzTlgkaPz9os*uKwQJsl-iQ5lEd79CnvpSgibPBtU='
-            'http://www.mahooooo.com'
+            'https://api.github.com/'
         ]
         
         print(str(self.settings))
